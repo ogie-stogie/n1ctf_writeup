@@ -1,0 +1,99 @@
+0000000000000000 c0489090         ror byte [rax-0x70], 0x90
+0000000000000004 e803000000       call 0xc                
+0000000000000009 e8eb125848       call 0x485812f9         
+000000000000000e 83c001           add eax, 0x1            
+0000000000000011 50               push rax                
+0000000000000012 4889e0           mov rax, rsp            
+0000000000000015 488700           xchg [rax], rax         
+0000000000000018 5c               pop rsp                 
+0000000000000019 48890424         mov [rsp], rax          
+000000000000001d c3               ret                     
+000000000000001e 488d85f0fdffff   lea rax, [rbp-0x210]    
+0000000000000025 4889c7           mov rdi, rax            
+0000000000000028 e8d9fcffff       call 0xfffffffffffffd06 
+000000000000002d 83f8ff           cmp eax, 0xffffffff     
+0000000000000030 750a             jnz 0x3c                
+0000000000000032 bf00000000       mov edi, 0x0            
+0000000000000037 e8c7faffff       call 0xfffffffffffffb03 
+000000000000003c 488d85d0fdffff   lea rax, [rbp-0x230]    
+0000000000000043 ba13000000       mov edx, 0x13           
+0000000000000048 4889c6           mov rsi, rax            
+000000000000004b bf00000000       mov edi, 0x0            
+0000000000000050 e8ecfaffff       call 0xfffffffffffffb41 
+0000000000000055 48c785c8fdffff69 mov qword [rbp-0x238], 0x400a69
+                -0a4000          
+0000000000000060 488b85c8fdffff   mov rax, [rbp-0x238]    
+0000000000000067 48890527142000   mov [rip+0x201427], rax 
+000000000000006e b8540b4000       mov eax, 0x400b54       
+0000000000000073 2500c0ffff       and eax, 0xffffc000     
+0000000000000078 ba07000000       mov edx, 0x7            
+000000000000007d be10000000       mov esi, 0x10           
+0000000000000082 4889c7           mov rdi, rax            
+0000000000000085 e871fbffff       call 0xfffffffffffffbfb 
+000000000000008a c785c4fdffff0000 mov dword [rbp-0x23c], 0x0
+                -0000            
+0000000000000094 eb63             jmp 0xf9                
+0000000000000096 488b15f8132000   mov rdx, [rip+0x2013f8] 
+000000000000009d 8b85c4fdffff     mov eax, [rbp-0x23c]    
+00000000000000a3 4898             cdqe                    
+00000000000000a5 488d3402         lea rsi, [rdx+rax]      
+00000000000000a9 488b15e5132000   mov rdx, [rip+0x2013e5] 
+00000000000000b0 8b85c4fdffff     mov eax, [rbp-0x23c]    
+00000000000000b6 4898             cdqe                    
+00000000000000b8 4801d0           add rax, rdx            
+00000000000000bb 0fb600           movzx eax, byte [rax]   
+00000000000000be 89c7             mov edi, eax            
+00000000000000c0 8b8dc4fdffff     mov ecx, [rbp-0x23c]    
+00000000000000c6 ba67666666       mov edx, 0x66666667     
+00000000000000cb 89c8             mov eax, ecx            
+00000000000000cd f7ea             imul edx                
+00000000000000cf d1fa             sar edx, 1              
+00000000000000d1 89c8             mov eax, ecx            
+00000000000000d3 c1f81f           sar eax, 0x1f           
+00000000000000d6 29c2             sub edx, eax            
+00000000000000d8 89d0             mov eax, edx            
+00000000000000da c1e002           shl eax, 0x2            
+00000000000000dd 01d0             add eax, edx            
+00000000000000df 29c1             sub ecx, eax            
+00000000000000e1 89ca             mov edx, ecx            
+00000000000000e3 4863c2           movsxd rax, edx         
+00000000000000e6 0fb68405d0fdffff movzx eax, byte [rbp+rax-0x230]
+00000000000000ee 31f8             xor eax, edi            
+00000000000000f0 8806             mov [rsi], al           
+00000000000000f2 8385c4fdffff01   add dword [rbp-0x23c], 0x1
+00000000000000f9 83bdc4fdffff09   cmp dword [rbp-0x23c], 0x9
+0000000000000100 7e94             jle 0x96                
+0000000000000102 e803000000       call 0x10a              
+0000000000000107 e8eb125848       call 0x485813f7         
+000000000000010c 83c001           add eax, 0x1            
+000000000000010f 50               push rax                
+0000000000000110 4889e0           mov rax, rsp            
+0000000000000113 488700           xchg [rax], rax         
+0000000000000116 5c               pop rsp                 
+0000000000000117 48890424         mov [rsp], rax          
+000000000000011b c3               ret                     
+000000000000011c 488d85d0fdffff   lea rax, [rbp-0x230]    
+0000000000000123 4883c005         add rax, 0x5            
+0000000000000127 488d95f0fdffff   lea rdx, [rbp-0x210]    
+000000000000012e 4889c6           mov rsi, rax            
+0000000000000131 4889d7           mov rdi, rdx            
+0000000000000134 e87dfdffff       call 0xfffffffffffffeb6 
+0000000000000139 85c0             test eax, eax           
+000000000000013b 7414             jz 0x151                
+000000000000013d ba06000000       mov edx, 0x6            
+0000000000000142 bed30d4000       mov esi, 0x400dd3       
+0000000000000147 bf01000000       mov edi, 0x1            
+000000000000014c e8cdf9ffff       call 0xfffffffffffffb1e 
+0000000000000151 ebff             jmp 0x152               
+0000000000000153 c0489090         ror byte [rax-0x70], 0x90
+0000000000000157 bf00000000       mov edi, 0x0            
+000000000000015c e8a2f9ffff       call 0xfffffffffffffb03 
+0000000000000161 90               nop                     
+0000000000000162 488b45f8         mov rax, [rbp-0x8]      
+0000000000000166 6448330425280000 xor rax, [fs:0x28]      
+                -00              
+000000000000016f 7405             jz 0x176                
+0000000000000171 e857f8ffff       call 0xfffffffffffff9cd 
+0000000000000176 c9               leave                   
+0000000000000177 c3               ret                     
+0000000000000178 0f1f440000       nop [rax+rax]           
