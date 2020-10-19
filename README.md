@@ -21,16 +21,13 @@ http://101.32.205.189/?input=INJECTION_CODE_HERE
 The php process the input variable through a get method and that is a red flag for injection attempts. After not seeing any new leads and having been in the middle of oflo, we returned to oflo (where we kept trying to find a non-existent buffer overflow). Towards the end of the CTF, James joined me and helped give me some new perspectives on how to approach this problem, as well as me attempting to work backwards from the flag to the injection code. Here are some of the notes and thoughts as we revisted this problem:<br>
 <br>
 <div>
-http://101.32.205.189/?input=INJECTION_CODE_HERE
 
-<br>
+http://101.32.205.189/?input=INJECTION_CODE_HERE
 
 $input = INJECTION_CODE_HERE
 
-<br>
-
 php injection in unserialize($input)
-<br>
+
 we believe class ip will allow us to set the variables for later use in the flag class?
 possibly use ip class to get file? and then flag uses readfile on that returned file?
 Could possibly be two different methods for accessing the flag that are unrelated?
