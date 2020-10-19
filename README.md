@@ -22,8 +22,13 @@ The php process the input variable through a get method and that is a red flag f
 <br>
 <div>
 http://101.32.205.189/?input=INJECTION_CODE_HERE
-$input = INJECTION_CODE_HERE
+
 <br>
+
+$input = INJECTION_CODE_HERE
+
+<br>
+
 php injection in unserialize($input)
 <br>
 we believe class ip will allow us to set the variables for later use in the flag class?
