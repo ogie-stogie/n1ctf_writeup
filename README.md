@@ -31,31 +31,31 @@ php injection in unserialize($input)
 we believe class ip will allow us to set the variables for later use in the flag class?
 possibly use ip class to get file? and then flag uses readfile on that returned file?
 Could possibly be two different methods for accessing the flag that are unrelated?
-<br>
+
 waf is a filter to remove remote command execution, however the function is empty
-<br>
+
 set HTTP_X_FORWARDED_FOR in $_SERVER #This is where super global environment variable exist?
-<br>
+
 flag.__construct("n1ctf")
 $this->ip = $ip
-<br>
+
 flag.getflag()
 this->check == key****************
 calls readfile() #thats a syscall
 returns flag
-<br>
+
 flag.__destruct()
 calls flag
 echos the output of flag.getflag()
-<br>
+
 the output should be returned as an html page
 what is the purpose of the __wakeup? James believes it could be for testing purposes
-<br>
+
 testing plan:
-<br>
+
 use __wakeup() to see if __construct("n1ctf") sets $this->ip properly
 see if "welcome to nictf2020" is printed when flag is destructed (what we really want is ip = key**************** for final injection attack)
-<br>
+
 injection attempts
 <div>
 
